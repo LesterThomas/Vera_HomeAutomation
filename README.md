@@ -13,3 +13,13 @@ Complete list of Luup requests:
 http://wiki.micasaverde.com/index.php/Luup_Requests
 
 
+To call a HTTP GET from within a scene using Luua:
+
+```
+local status, result = luup.inet.wget("http://lesterthomas.ddns.net:1880/api/haEvent?manRoomSwitch=On", 5)
+```
+
+This calls a flow running in node-red with a HTTP timeout of 5 seconds. The Luua documentation for GET and POST are at: http://wiki.micasaverde.com/index.php/Luup_Scenes_Events
+
+
+
