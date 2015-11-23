@@ -23,3 +23,10 @@ This calls a flow running in node-red with a HTTP timeout of 5 seconds. The Luua
 
 
 
+Temperature and Light Sensors can be queried, as well as setting off scenes. To query the value:
+
+```
+http://192.168.1.120:49451/data_request?id=variableget&DeviceNum=25&serviceId=urn:micasaverde-com:serviceId:LightSensor1&Variable=CurrentLevel
+http://192.168.1.120:49451/data_request?id=variableget&DeviceNum=24&serviceId=urn:upnp-org:serviceId:TemperatureSensor1&Variable=CurrentTemperature
+http://192.168.1.120:49451/data_request?id=variableget&DeviceNum=26&serviceId=urn:micasaverde-com:serviceId:SecuritySensor1&Variable=Tripped
+```
